@@ -3,7 +3,7 @@ services:
   - type: web
     name: n8n
     env: docker
-    repo: https://github.com/n8n-io/n8n
+    repo: https://github.com/sarveshpro/n8n-heroku
     region: frankfurt
     plan: starter
     branch: master
@@ -16,4 +16,10 @@ services:
         value: password
       - key: GENERIC_TIMEZONE
         value: Europe/Berlin
+      - key: DATA_FOLDER
+        value: /root/.n8n/
+    disk:
+      name: n8n
+      mountPath: /root/.n8n/
+      sizeGB: 1
 
