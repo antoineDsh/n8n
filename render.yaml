@@ -13,7 +13,7 @@ services:
         fromService:
           name: n8n
           type: web
-          property: host
+          property: RENDER_EXTERNAL_URL
       - key: N8N_BASIC_AUTH_USER
         value: user
       - key: N8N_BASIC_AUTH_PASSWORD
