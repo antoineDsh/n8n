@@ -1,0 +1,24 @@
+services:
+  # A Docker web service
+  - type: web
+    name: n8n
+    env: docker
+    repo: https://github.com/n8n-io/n8n
+    region: frankfurt
+    plan: starter
+    branch: master
+    healthCheckPath: /healthz
+    dockerfilePath: ./docker/images/n8n/Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        value: user
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: password
+      - key: GENERIC_TIMEZONE
+        value: Europe/Berlin
+      - key: DATA_FOLDER
+        value: /root/n8n/
+    disk:
+      name: n8n
+      mountPath: /root/n8n/
+      sizeGB: 1
