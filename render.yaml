@@ -16,9 +16,4 @@ services:
         value: password
       - key: GENERIC_TIMEZONE
         value: Europe/Berlin
-      - key: DATA_FOLDER
-        value: /root/.n8n/
-    disk:
-      name: n8n
-      mountPath: /root/.n8n/
-      sizeGB: 1
+
