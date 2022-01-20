@@ -8,7 +8,6 @@ services:
     plan: starter
     branch: master
     healthCheckPath: /healthz
-    dockerfilePath: ./docker/images/n8n/Dockerfile
     envVars:
       - key: N8N_BASIC_AUTH_USER
         value: user
