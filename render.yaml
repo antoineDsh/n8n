@@ -22,7 +22,9 @@ services:
       - key: N8N_BASIC_AUTH_PASSWORD
         value: password
       - key: N8N_VERSION
-        value: n8n@0.162.0
+        value: 0.162.0
+      - key: N8N_PORT
+        value: 443
       - key: GENERIC_TIMEZONE
         value: Europe/Berlin
       - key: DATA_FOLDER
